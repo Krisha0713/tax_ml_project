@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tax ML Analyzer</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="dark">
+
+<header>
+    <h1>Tax ML Analyzer</h1>
+
+    <label class="switch">
+        <input type="checkbox" onclick="toggleTheme()">
+        <span class="slider"></span>
+    </label>
+</header>
+
+<section class="card">
+    <h2>Enter Your Details</h2>
+
+    <div class="input-grid">
+        <input id="annualIncome" placeholder="Annual Income (₹)">
+        <input id="investment80c" placeholder="80C Investment (₹)">
+        <input id="hra" placeholder="HRA (₹)">
+        <input id="previousTax" placeholder="Previous Tax Paid (₹)">
+
+        <select id="employmentType">
+            <option value="Salaried">Salaried</option>
+            <option value="Self Employed">Self Employed</option>
+        </select>
+
+        <input id="extra80c" placeholder="Additional 80C (₹)">
+    </div>
+
+    <button onclick="analyzeTax()">Analyze Tax</button>
+</section>
+
+<section class="card">
+    <h2>Results</h2>
+    <div id="results"></div>
+</section>
+
+<section class="card">
+    <h2>Tax Summary</h2>
+    <div id="summary"></div>
+</section>
+
+<section class="card">
+    <h2>What-If Analysis (Extra 80C)</h2>
+    <div id="whatIf"></div>
+</section>
+
+<section class="card">
+    <h2>Personalized Insights</h2>
+    <ul id="insights"></ul>
+</section>
+
+<section class="card">
+    <h2>Overpayment Risk</h2>
+    <canvas id="riskChart"></canvas>
+</section>
+
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>

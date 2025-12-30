@@ -1,0 +1,238 @@
+
+/* -------- GLOBAL -------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* -------- THEMES -------- */
+body.light {
+    background: #f4f6fb;
+    color: #1a1a1a;
+}
+
+body.dark {
+    background: #0f172a;
+    color: #e5e7eb;
+}
+
+/* -------- HEADER -------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: linear-gradient(90deg, #2563eb, #4f46e5);
+    color: white;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* -------- CARD -------- */
+.card {
+    background: white;
+    margin: 30px auto;
+    padding: 25px;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+body.dark .card {
+    background: #1e293b;
+}
+
+/* -------- INPUTS -------- */
+.card input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    font-size: 15px;
+}
+
+body.dark .card input {
+    background: #0f172a;
+    color: white;
+    border: 1px solid #334155;
+}
+
+/* -------- BUTTON -------- */
+button {
+    width: 100%;
+    margin-top: 18px;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #2563eb, #4f46e5);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* -------- RESULTS -------- */
+#taxResult, #statusResult {
+    margin-top: 12px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* -------- THEME TOGGLE -------- */
+.switch {
+    position: relative;
+    width: 52px;
+    height: 26px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 26px;
+    inset: 0;
+    transition: 0.4s;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #22c55e;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* -------- CHART -------- */
+canvas {
+    display: block;
+    max-width: 700px;
+    margin: 40px auto;
+}
+/* ===== THEME VARIABLES ===== */
+:root {
+    --bg-color: #f5f7fb;
+    --card-bg: #ffffff;
+    --text-color: #1f2937;
+}
+
+.dark-mode {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-color: #e5e7eb;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 16px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+}
+
+/* ===== TOGGLE SWITCH ===== */
+.theme-toggle {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 34px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    background-color: white;
+    border-radius: 50%;
+    left: 3px;
+    bottom: 3px;
+    transition: 0.3s;
+}
+
+input:checked + .slider {
+    background-color: #4f46e5;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+.input-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.input-grid input,
+.input-grid select {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* Button stays clean */
+.card button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 15px;
+}
