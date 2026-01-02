@@ -1,27 +1,27 @@
 
-## 👩‍💻 Author
+##  Author
 Krishna Priya R
 CSE Student | AI/ML Enthusiast
 
-# 💰 Tax Overpayment Risk Analyzer (ML + Flask)
+#  Tax Overpayment Risk Analyzer (ML + Flask)
 
 A Machine Learning powered Flask web application that analyzes income tax data, predicts tax liability, detects overpayment risk, and provides personalized tax-saving insights.
 
 ---
 
-## 🚀 Features
+##  Features
 
-- 📊 ML-based tax prediction using RandomForest
-- ⚠️ Overpayment risk detection
-- 💡 Personalized tax-saving suggestions
-- 📈 Interactive charts (Chart.js)
-- 🌗 Dark / Light mode toggle
-- 🔁 What-if analysis for extra 80C investments
-- 🧠 Joblib-based ML model loading
+-  ML-based tax prediction using RandomForest
+-  Overpayment risk detection
+-  Personalized tax-saving suggestions
+-  Interactive charts (Chart.js)
+-  Dark / Light mode toggle
+-  What-if analysis for extra 80C investments
+-  Joblib-based ML model loading
 
 ---
 
-## 🏗 Project Structure
+##  Project Structure
 
 tax_ml_project/
 │
@@ -42,7 +42,7 @@ tax_ml_project/
 
 ---
 
-## 🧪 Input Parameters
+##  Input Parameters
 
 - Annual Income
 - Section 80C Investment
@@ -53,7 +53,7 @@ tax_ml_project/
 
 ---
 
-## 📤 Output
+##  Output
 
 - Predicted Tax
 - Overpayment Risk (%)
@@ -64,7 +64,7 @@ tax_ml_project/
 
 ---
 
-## ⚙️ Tech Stack
+##  Tech Stack
 
 - Python
 - Flask
@@ -75,7 +75,7 @@ tax_ml_project/
 
 ---
 
-## ▶️ How to Run
+##  How to Run
 
 ### 1️⃣ Install dependencies
 ```bash
