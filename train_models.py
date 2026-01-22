@@ -30,12 +30,8 @@ y_clf = df["Overpayment_Risk"]
 # -----------------------------
 # TRAIN-TEST SPLIT (CORRECT)
 # -----------------------------
-X_train, X_test, y_reg_train, y_reg_test = train_test_split(
-    X, y_reg, test_size=0.2, random_state=42
-)
-
-_, _, y_clf_train, y_clf_test = train_test_split(
-    X, y_clf, test_size=0.2, random_state=42
+X_train, X_test, y_reg_train, y_reg_test, y_clf_train, y_clf_test = train_test_split(
+    X, y_reg, y_clf, test_size=0.2, random_state=42
 )
 
 # -----------------------------
@@ -86,5 +82,6 @@ joblib.dump(reg_model, os.path.join(MODEL_DIR, "tax_regression_model.pkl"))
 joblib.dump(clf_model, os.path.join(MODEL_DIR, "tax_overpayment_model.pkl"))
 
 print("\n✅ Models saved successfully")
+
 
 
